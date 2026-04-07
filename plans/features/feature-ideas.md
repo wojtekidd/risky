@@ -1,12 +1,78 @@
-Zero-Jargon Impact Wizard: a frictionless, gamified interface that allows business owners to model downtime impact without ever seeing a spreadsheet or complex risk matrix. Users engage with sliders, a data recovery wheel, and expanding "ripple effect" visuals to intuitively describe their operational breaking points. Meanwhile, the backend engine invisibly translates these simple narrative inputs into hard continuity metrics like MTPD, RPO, and MBCO.
+# Feature Ideas
 
-Frictionless Delegation: business owners map their known high-level assets and instantly delegate the complex technical layers to domain experts. By sending secure, no-login "magic links" directly to IT or HR, the system decentralizes data collection and eliminates the need for tedious alignment meetings. Subject matter experts simply click the link, input their specific dependencies, and close the tab.
+---
 
-Dynamic Dependency Mapping: IT teams can build architecture stacks in either direction, mapping downwards from a business application or upwards from physical hardware. The system actively guides this process by predicting the next logical layer, ensuring users never skip critical components like a hypervisor or database. Additionally, users can attach lateral "supportive blocks" to account for non-hierarchical dependencies like third-party vendors or security services.
+## Category: Business Impact Analysis (BIA)
 
-Intelligent Asset Profiling: We refuse to trap your organization in the endless implementation hell of building another legacy CMDB. The platform is ruthlessly optimized for Business Continuity, capturing only the necessary data. After drag and drop, users simply type a basic hostname and select the underlying technology from a smart, pre-built dictionary (e.g., VMware, Red Hat, Oracle). The system automatically generates a unique ID behind the scenes to keep the database organized. To eliminate repetitive data entry, business ownership and administrator roles automatically cascade down the architecture tree (the user can easily override the inherited default). 
+### F1 — Zero-Jargon Impact Wizard
 
-Simple Management View:
-- Global Asset Matrix The management view distills the entire organization's architecture into a clean, interactive grid. Each tile represents a specific asset, with every business process relying on a unique combination of these building blocks. This provides executives with an instant, bird's-eye perspective of their operational foundation.
-- Concentration Heatmap As an asset is shared across multiple business processes, its tile progressively darkens on the matrix. This creates an intuitive heat map that instantly exposes hidden Single Points of Failure (SPOF) without requiring complex reports. Executives can immediately spot which core components are single-handedly holding up the company.
-- Interactive Deep Dives Clicking any tile instantly expands it into a comprehensive asset card, revealing its exact position in the architecture stack. Users can immediately see lifecycle data, ownership, and exactly which upstream business processes will crash if that specific asset fails. It seamlessly bridges the gap between a high-level executive overview and actionable technical reality. 
+A frictionless, gamified interface that allows business owners to model downtime impact without ever seeing a spreadsheet or complex risk matrix.
+
+**Key interactions:**
+- Sliders, a data recovery wheel, and expanding "ripple effect" visuals
+- Users describe operational breaking points in plain language
+- Backend invisibly translates narrative inputs into hard continuity metrics
+
+**Outputs:** MTPD, RPO, MBCO
+
+---
+
+## Category: Collaboration & Delegation
+
+### F2 — Frictionless Delegation
+
+Business owners map high-level assets and instantly delegate complex technical layers to domain experts — without alignment meetings.
+
+**Key interactions:**
+- Secure, no-login "magic links" sent directly to IT or HR contacts
+- Subject matter experts click link → input dependencies → close tab
+- Decentralized data collection; no accounts or onboarding required
+
+---
+
+## Category: Architecture & Dependency Mapping
+
+### F3 — Dynamic Dependency Mapping
+
+IT teams build architecture stacks in either direction — top-down from a business application or bottom-up from physical hardware.
+
+**Key interactions:**
+- System predicts the next logical layer to prevent skipped components (e.g., hypervisor, database)
+- Lateral "supportive blocks" for non-hierarchical dependencies (vendors, security services)
+
+---
+
+### F4 — Intelligent Asset Profiling
+
+Ruthlessly optimized for Business Continuity — not a legacy CMDB replacement.
+
+**Key interactions:**
+- Drag and drop asset placement
+- Type a hostname → select technology from a smart pre-built dictionary (VMware, Red Hat, Oracle, etc.)
+- System auto-generates unique asset IDs
+- Business ownership and administrator roles cascade down the architecture tree (overridable)
+
+**Design principle:** Capture only what BC requires. Eliminate implementation hell.
+
+---
+
+## Category: Executive & Management Views
+
+### F5 — Simple Management View
+
+Distills the entire organization's architecture into an executive-friendly interface. Three layers:
+
+**Global Asset Matrix**
+- Interactive grid where each tile = one asset
+- Every business process maps to a unique combination of tiles
+- Bird's-eye view of the operational foundation
+
+**Concentration Heatmap**
+- Tiles progressively darken as an asset is shared across more business processes
+- Instantly exposes hidden Single Points of Failure (SPOFs)
+- No reports needed — visual pattern recognition
+
+**Interactive Deep Dives**
+- Click any tile → expands into a full asset card
+- Shows: architecture stack position, lifecycle data, ownership, upstream business processes that fail if this asset goes down
+- Bridges executive overview ↔ actionable technical detail
