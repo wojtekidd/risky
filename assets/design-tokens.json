@@ -1,0 +1,172 @@
+{
+  "brand": {
+    "name": "Risky",
+    "theme": "Modern & Confident",
+    "version": "1.0.0",
+    "updated": "2026-04-07"
+  },
+  "primitive": {
+    "color": {
+      "indigo": {
+        "50":  { "value": "#EEF2FF", "description": "Indigo subtle background" },
+        "100": { "value": "#E0E7FF", "description": "Indigo light tint" },
+        "300": { "value": "#818CF8", "description": "Indigo light" },
+        "500": { "value": "#6366F1", "description": "Indigo mid" },
+        "600": { "value": "#4F46E5", "description": "Indigo — primary brand color" },
+        "700": { "value": "#4338CA", "description": "Indigo dark" },
+        "900": { "value": "#312E81", "description": "Indigo deepest" }
+      },
+      "teal": {
+        "50":  { "value": "#F0FDFA", "description": "Teal subtle background" },
+        "200": { "value": "#99F6E4", "description": "Teal light tint" },
+        "300": { "value": "#5EEAD4", "description": "Teal light" },
+        "600": { "value": "#0D9488", "description": "Teal — secondary brand color" },
+        "700": { "value": "#0F766E", "description": "Teal dark" },
+        "900": { "value": "#134E4A", "description": "Teal deepest" }
+      },
+      "amber": {
+        "50":  { "value": "#FFFBEB", "description": "Amber subtle background" },
+        "200": { "value": "#FDE68A", "description": "Amber light" },
+        "300": { "value": "#FCD34D", "description": "Amber soft" },
+        "400": { "value": "#FBBF24", "description": "Amber warning light" },
+        "500": { "value": "#F59E0B", "description": "Amber — accent / warning color" },
+        "600": { "value": "#D97706", "description": "Amber dark" }
+      },
+      "neutral": {
+        "white":  { "value": "#FFFFFF" },
+        "50":     { "value": "#F9FAFB", "description": "Surface / card background" },
+        "100":    { "value": "#F3F4F6", "description": "Surface raised" },
+        "200":    { "value": "#E5E7EB", "description": "Border default" },
+        "300":    { "value": "#D1D5DB", "description": "Border strong" },
+        "500":    { "value": "#6B7280", "description": "Text muted" },
+        "700":    { "value": "#374151", "description": "Text secondary" },
+        "900":    { "value": "#111827", "description": "Text primary" },
+        "black":  { "value": "#000000" }
+      },
+      "semantic": {
+        "success": { "value": "#10B981" },
+        "warning": { "value": "#F59E0B" },
+        "error":   { "value": "#EF4444" },
+        "info":    { "value": "#3B82F6" }
+      }
+    },
+    "typography": {
+      "fontFamily": {
+        "heading": { "value": "'Inter', system-ui, -apple-system, sans-serif" },
+        "body":    { "value": "'Inter', system-ui, -apple-system, sans-serif" },
+        "mono":    { "value": "'JetBrains Mono', 'Fira Code', monospace" }
+      },
+      "fontSize": {
+        "xs":   { "value": "12px" },
+        "sm":   { "value": "14px" },
+        "base": { "value": "16px" },
+        "lg":   { "value": "18px" },
+        "xl":   { "value": "20px" },
+        "2xl":  { "value": "24px" },
+        "3xl":  { "value": "28px" },
+        "4xl":  { "value": "36px" },
+        "5xl":  { "value": "48px" }
+      },
+      "fontWeight": {
+        "regular":   { "value": "400" },
+        "medium":    { "value": "500" },
+        "semibold":  { "value": "600" },
+        "bold":      { "value": "700" }
+      },
+      "lineHeight": {
+        "tight":   { "value": "1.2" },
+        "snug":    { "value": "1.25" },
+        "normal":  { "value": "1.5" },
+        "relaxed": { "value": "1.6" }
+      }
+    },
+    "spacing": {
+      "xs":   { "value": "4px" },
+      "sm":   { "value": "8px" },
+      "md":   { "value": "16px" },
+      "lg":   { "value": "24px" },
+      "xl":   { "value": "32px" },
+      "2xl":  { "value": "48px" },
+      "3xl":  { "value": "64px" }
+    },
+    "borderRadius": {
+      "sm":   { "value": "4px" },
+      "md":   { "value": "8px" },
+      "lg":   { "value": "12px" },
+      "xl":   { "value": "16px" },
+      "full": { "value": "9999px" }
+    }
+  },
+  "semantic": {
+    "color": {
+      "primary": {
+        "default": { "value": "{primitive.color.indigo.600}" },
+        "hover":   { "value": "{primitive.color.indigo.700}" },
+        "active":  { "value": "{primitive.color.indigo.700}" },
+        "subtle":  { "value": "{primitive.color.indigo.50}" },
+        "light":   { "value": "{primitive.color.indigo.300}" }
+      },
+      "secondary": {
+        "default": { "value": "{primitive.color.teal.600}" },
+        "hover":   { "value": "{primitive.color.teal.700}" },
+        "subtle":  { "value": "{primitive.color.teal.50}" },
+        "light":   { "value": "{primitive.color.teal.300}" }
+      },
+      "accent": {
+        "default": { "value": "{primitive.color.amber.500}" },
+        "hover":   { "value": "{primitive.color.amber.600}" },
+        "subtle":  { "value": "{primitive.color.amber.50}" },
+        "light":   { "value": "{primitive.color.amber.300}" }
+      },
+      "background": {
+        "page":    { "value": "{primitive.color.neutral.white}" },
+        "surface": { "value": "{primitive.color.neutral.50}" },
+        "raised":  { "value": "{primitive.color.neutral.100}" }
+      },
+      "text": {
+        "primary":   { "value": "{primitive.color.neutral.900}" },
+        "secondary": { "value": "{primitive.color.neutral.700}" },
+        "muted":     { "value": "{primitive.color.neutral.500}" },
+        "onPrimary": { "value": "{primitive.color.neutral.white}" }
+      },
+      "border": {
+        "default": { "value": "{primitive.color.neutral.200}" },
+        "strong":  { "value": "{primitive.color.neutral.300}" }
+      },
+      "status": {
+        "success": { "value": "{primitive.color.semantic.success}" },
+        "warning": { "value": "{primitive.color.semantic.warning}" },
+        "error":   { "value": "{primitive.color.semantic.error}" },
+        "info":    { "value": "{primitive.color.semantic.info}" }
+      }
+    }
+  },
+  "component": {
+    "button": {
+      "primary": {
+        "background":   { "value": "{semantic.color.primary.default}" },
+        "text":         { "value": "{semantic.color.text.onPrimary}" },
+        "hoverBg":      { "value": "{semantic.color.primary.hover}" },
+        "borderRadius": { "value": "{primitive.borderRadius.md}" }
+      },
+      "secondary": {
+        "background":   { "value": "transparent" },
+        "text":         { "value": "{semantic.color.primary.default}" },
+        "border":       { "value": "{semantic.color.primary.default}" },
+        "borderRadius": { "value": "{primitive.borderRadius.md}" }
+      }
+    },
+    "card": {
+      "background":   { "value": "{semantic.color.background.surface}" },
+      "border":       { "value": "{semantic.color.border.default}" },
+      "borderRadius": { "value": "{primitive.borderRadius.lg}" }
+    },
+    "input": {
+      "background":   { "value": "{semantic.color.background.page}" },
+      "border":       { "value": "{semantic.color.border.default}" },
+      "borderRadius": { "value": "{primitive.borderRadius.md}" },
+      "text":         { "value": "{semantic.color.text.primary}" },
+      "placeholder":  { "value": "{semantic.color.text.muted}" }
+    }
+  }
+}
