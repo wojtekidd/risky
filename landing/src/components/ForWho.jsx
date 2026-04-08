@@ -57,7 +57,7 @@ const personas = [
   },
   {
     role: 'CFO',
-    accent: 'text-amber-600',
+    accent: 'text-amber-700',
     iconBg: 'bg-amber-50 border-amber-100',
     icon: (
       <svg className="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -98,13 +98,13 @@ export default function ForWho() {
               <div className={`w-9 h-9 rounded-lg border flex items-center justify-center mb-4 ${iconBg}`}>
                 {icon}
               </div>
-              <div className="text-xs font-semibold text-neutral-400 uppercase tracking-wider mb-2">
+              <div className="text-xs font-semibold text-neutral-600 uppercase tracking-wider mb-2">
                 {role}
               </div>
               <h3 className={`font-semibold mb-2 leading-snug ${accent}`}>
                 "{message}"
               </h3>
-              <p className="text-sm text-neutral-500 leading-relaxed">{detail}</p>
+              <p className="text-sm text-neutral-600 leading-relaxed">{detail}</p>
             </div>
           ))}
 

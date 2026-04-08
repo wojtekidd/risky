@@ -12,17 +12,17 @@ export default function Footer() {
         </div>
 
         {/* Tagline */}
-        <p className="text-sm text-neutral-500 italic">
+        <p className="text-sm text-neutral-400 italic">
           Finally, IT and business agree on something.
         </p>
 
         {/* Links */}
-        <div className="flex items-center gap-6 text-sm text-neutral-500">
-          <a href="mailto:hello@risky.io" className="hover:text-neutral-300 transition-colors">
+        <div className="flex items-center gap-6 text-sm text-neutral-400">
+          <a href="mailto:hello@risky.io" className="hover:text-neutral-200 transition-colors">
             hello@risky.io
           </a>
-          <span className="text-neutral-700">·</span>
-          <span className="text-neutral-600">© {new Date().getFullYear()} Risky</span>
+          <span className="text-neutral-600">·</span>
+          <span className="text-neutral-400">© {new Date().getFullYear()} Risky</span>
         </div>
       </div>
     </footer>

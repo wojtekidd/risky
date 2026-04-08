@@ -78,7 +78,7 @@ export default function Differentiators() {
                 <svg className="w-4 h-4 text-neutral-300 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
-                <span className="text-sm text-neutral-400">{them}</span>
+                <span className="text-sm text-neutral-500">{them}</span>
               </div>
               <div className="px-6 py-4 flex items-start gap-3 bg-indigo-50/60 hover:bg-indigo-50 transition-colors border-l border-indigo-100">
                 <svg className="w-4 h-4 text-teal-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -63,7 +63,7 @@ export default function WaitlistCTA() {
 
         <WaitlistForm size="lg" />
 
-        <p className="mt-6 text-sm text-neutral-500">
+        <p className="mt-6 text-sm text-neutral-400">
           No spam. No sales calls unless you ask for one.
         </p>
 
