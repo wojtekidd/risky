@@ -25,6 +25,18 @@ const rows = [
   },
 ]
 
+const XIcon = () => (
+  <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+  </svg>
+)
+
+const CheckIcon = () => (
+  <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+  </svg>
+)
+
 export default function Differentiators() {
   return (
     <section className="py-24 px-6 mesh-subtle border-t border-neutral-200">
@@ -43,14 +55,33 @@ export default function Differentiators() {
           </p>
         </div>
 
-        <div className="rounded-2xl border border-neutral-200 overflow-hidden shadow-sm">
-          {/* Header — hidden on mobile, shown as inline labels per row instead */}
-          <div className="hidden md:grid grid-cols-2">
+        {/* Mobile: one card per pair */}
+        <div className="md:hidden flex flex-col gap-3">
+          {rows.map(({ them, us }, i) => (
+            <div key={i} className="rounded-xl border border-neutral-200 overflow-hidden shadow-sm">
+              <div className="px-4 py-3.5 flex items-start gap-2.5 bg-white">
+                <span className="mt-0.5 text-neutral-300"><XIcon /></span>
+                <span className="text-sm text-neutral-500">{them}</span>
+              </div>
+              <div className="flex items-center gap-3 px-4 py-1.5 bg-neutral-50 border-y border-neutral-100">
+                <div className="h-px flex-1 bg-neutral-200" />
+                <span className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest">vs</span>
+                <div className="h-px flex-1 bg-neutral-200" />
+              </div>
+              <div className="px-4 py-3.5 flex items-start gap-2.5 bg-indigo-50">
+                <span className="mt-0.5 text-teal-500"><CheckIcon /></span>
+                <span className="text-sm text-neutral-800 font-semibold">{us}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop: two-column table */}
+        <div className="hidden md:block rounded-2xl border border-neutral-200 overflow-hidden shadow-sm">
+          <div className="grid grid-cols-2">
             <div className="px-6 py-4 flex items-center gap-2.5 bg-neutral-50 border-b border-neutral-200">
               <span className="w-5 h-5 rounded-full bg-neutral-200 flex items-center justify-center shrink-0">
-                <svg className="w-3 h-3 text-neutral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
+                <XIcon />
               </span>
               <span className="text-xs font-semibold text-neutral-500 uppercase tracking-wider">
                 What the market offers
@@ -58,9 +89,7 @@ export default function Differentiators() {
             </div>
             <div className="px-6 py-4 flex items-center gap-2.5 bg-indigo-600 border-b border-indigo-700">
               <span className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center shrink-0">
-                <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                </svg>
+                <CheckIcon />
               </span>
               <span className="text-xs font-semibold text-white uppercase tracking-wider">
                 What Risky delivers
@@ -68,46 +97,20 @@ export default function Differentiators() {
             </div>
           </div>
 
-          {/* Rows */}
           {rows.map(({ them, us }, i) => (
-            <div
-              key={i}
-              className={`${i < rows.length - 1 ? 'border-b border-neutral-100' : ''}`}
-            >
-              {/* Mobile: stacked layout */}
-              <div className="md:hidden">
-                <div className="px-5 py-3 flex items-start gap-2.5 bg-white">
-                  <svg className="w-4 h-4 text-neutral-300 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                  <span className="text-sm text-neutral-500">{them}</span>
-                </div>
-                <div className="px-5 py-3 flex items-start gap-2.5 bg-indigo-50/80 border-t border-indigo-100">
-                  <svg className="w-4 h-4 text-teal-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-sm text-neutral-800 font-semibold">{us}</span>
-                </div>
+            <div key={i} className={`grid grid-cols-2 ${i < rows.length - 1 ? 'border-b border-neutral-100' : ''}`}>
+              <div className="px-6 py-4 flex items-start gap-3 bg-white">
+                <span className="mt-0.5 text-neutral-300"><XIcon /></span>
+                <span className="text-sm text-neutral-500">{them}</span>
               </div>
-
-              {/* Desktop: side-by-side layout */}
-              <div className="hidden md:grid grid-cols-2">
-                <div className="px-6 py-4 flex items-start gap-3 bg-white">
-                  <svg className="w-4 h-4 text-neutral-300 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                  <span className="text-sm text-neutral-500">{them}</span>
-                </div>
-                <div className="px-6 py-4 flex items-start gap-3 bg-indigo-50/60 hover:bg-indigo-50 transition-colors border-l border-indigo-100">
-                  <svg className="w-4 h-4 text-teal-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-sm text-neutral-800 font-medium">{us}</span>
-                </div>
+              <div className="px-6 py-4 flex items-start gap-3 bg-indigo-50/60 hover:bg-indigo-50 transition-colors border-l border-indigo-100">
+                <span className="mt-0.5 text-teal-500"><CheckIcon /></span>
+                <span className="text-sm text-neutral-800 font-medium">{us}</span>
               </div>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   )

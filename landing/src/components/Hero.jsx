@@ -104,7 +104,7 @@ export default function Hero() {
                 <stop offset="0%" stopColor="#818CF8" stopOpacity="0.4" />
                 <stop offset="100%" stopColor="#4F46E5" stopOpacity="0.9" />
               </linearGradient>
-              <linearGradient id="line-mid" x1="0%" y1="0%" x2="0%" y2="100%">
+              <linearGradient id="line-mid" x1="300" y1="0" x2="300" y2="48" gradientUnits="userSpaceOnUse">
                 <stop offset="0%" stopColor="#6366F1" stopOpacity="0.4" />
                 <stop offset="100%" stopColor="#4F46E5" stopOpacity="0.9" />
               </linearGradient>
