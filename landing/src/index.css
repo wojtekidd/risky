@@ -3,23 +3,90 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
-  body {
-    @apply font-sans text-neutral-900 bg-white antialiased;
-  }
+  html { scroll-behavior: smooth; }
+  body { @apply font-sans text-neutral-900 bg-white antialiased; }
 }
 
 @layer utilities {
+  /* Gradients */
   .text-gradient {
     background: linear-gradient(135deg, #4F46E5 0%, #0D9488 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+  .text-gradient-warm {
+    background: linear-gradient(135deg, #4F46E5 0%, #F59E0B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .border-gradient {
+    border: 1px solid transparent;
+    background-clip: padding-box;
+  }
+
+  /* Glow effects (Snyk-style) */
+  .glow-indigo {
+    box-shadow: 0 0 0 1px rgba(79,70,229,0.15), 0 4px 24px rgba(79,70,229,0.12);
+  }
+  .glow-indigo-lg {
+    box-shadow: 0 0 0 1px rgba(79,70,229,0.2), 0 8px 48px rgba(79,70,229,0.18);
+  }
+  .glow-teal {
+    box-shadow: 0 0 0 1px rgba(13,148,136,0.15), 0 4px 24px rgba(13,148,136,0.12);
+  }
+  .glow-amber {
+    box-shadow: 0 0 0 1px rgba(245,158,11,0.2), 0 4px 16px rgba(245,158,11,0.1);
+  }
+
+  /* Mesh background (Zendesk warmth) */
+  .mesh-hero {
+    background:
+      radial-gradient(ellipse 80% 50% at 50% -10%, rgba(79,70,229,0.08) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 80% 60%, rgba(13,148,136,0.05) 0%, transparent 60%),
+      #ffffff;
+  }
+  .mesh-dark {
+    background:
+      radial-gradient(ellipse 60% 50% at 20% 50%, rgba(79,70,229,0.15) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 40% at 80% 20%, rgba(13,148,136,0.1) 0%, transparent 60%),
+      #0F172A;
+  }
+  .mesh-subtle {
+    background:
+      radial-gradient(ellipse 60% 60% at 10% 100%, rgba(79,70,229,0.04) 0%, transparent 60%),
+      #F9FAFB;
+  }
+
+  /* Card hover line — left border glow */
+  .card-hover-line {
+    position: relative;
+    overflow: hidden;
+  }
+  .card-hover-line::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, #4F46E5, #0D9488);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    border-radius: 3px 0 0 3px;
+  }
+  .card-hover-line:hover::before { opacity: 1; }
+
+  /* Animation */
   .animate-delay-100 { animation-delay: 100ms; }
   .animate-delay-200 { animation-delay: 200ms; }
   .animate-delay-300 { animation-delay: 300ms; }
   .animate-delay-400 { animation-delay: 400ms; }
+
+  /* Connector line for hero diagram */
+  .connector {
+    position: absolute;
+    background: linear-gradient(90deg, rgba(79,70,229,0.3), rgba(13,148,136,0.3));
+    height: 1px;
+    transform-origin: left center;
+  }
 }

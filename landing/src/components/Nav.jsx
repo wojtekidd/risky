@@ -14,7 +14,7 @@ export default function Nav() {
 
         {/* Wordmark */}
         <button onClick={() => scrollTo('hero')} className="flex items-center gap-2 group">
-          <span className="w-7 h-7 rounded-lg bg-indigo-600 flex items-center justify-center">
+          <span className="w-7 h-7 rounded-lg bg-indigo-600 flex items-center justify-center glow-indigo">
             <span className="text-white font-bold text-sm leading-none">R</span>
           </span>
           <span className="font-bold text-xl tracking-tight text-neutral-900 group-hover:text-indigo-600 transition-colors">

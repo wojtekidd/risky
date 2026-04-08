@@ -1,7 +1,8 @@
 const features = [
   {
-    tag: 'BIA',
-    tagColor: 'bg-indigo-50 text-indigo-700',
+    tag: 'Impact Assessment',
+    tagColor: 'bg-indigo-50 text-indigo-700 border border-indigo-100',
+    accent: 'from-indigo-500 to-indigo-400',
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
@@ -10,12 +11,13 @@ const features = [
     ),
     title: 'Zero-Jargon Impact Wizard',
     description:
-      'Business owners model downtime impact through plain-language sliders and visual tools — no spreadsheets, no risk matrices. The platform translates their answers into MTPD, RPO, and MBCO automatically.',
-    highlight: 'Complete a BIA in days, not weeks.',
+      'Business owners model downtime impact through plain-language sliders and visual tools — no spreadsheets, no risk matrices. The platform translates their answers into recovery metrics automatically.',
+    highlight: 'Complete an impact assessment in days, not weeks.',
   },
   {
     tag: 'Collaboration',
-    tagColor: 'bg-teal-50 text-teal-700',
+    tagColor: 'bg-teal-50 text-teal-700 border border-teal-100',
+    accent: 'from-teal-500 to-teal-400',
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
@@ -24,12 +26,13 @@ const features = [
     ),
     title: 'Frictionless Delegation',
     description:
-      'Send secure magic links directly to IT, HR, or any subject-matter expert. They click, input their dependencies, and close the tab. No accounts. No onboarding. No alignment meetings.',
+      'Send secure magic links directly to IT, HR, or any subject-matter expert. They click, input their data, and close the tab. No accounts. No onboarding. No alignment meetings.',
     highlight: 'Decentralize data collection without losing control.',
   },
   {
     tag: 'Architecture',
-    tagColor: 'bg-indigo-50 text-indigo-700',
+    tagColor: 'bg-indigo-50 text-indigo-700 border border-indigo-100',
+    accent: 'from-indigo-400 to-teal-500',
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
@@ -38,12 +41,13 @@ const features = [
     ),
     title: 'Dynamic Dependency Mapping',
     description:
-      'Build architecture stacks top-down from a business application or bottom-up from hardware. The system predicts the next logical layer and supports lateral blocks for vendors and security services.',
+      'Build your technology stack top-down from a business application or bottom-up from hardware. The system predicts the next logical layer — including vendors and security services.',
     highlight: 'Never skip a critical component again.',
   },
   {
     tag: 'Asset Management',
-    tagColor: 'bg-teal-50 text-teal-700',
+    tagColor: 'bg-teal-50 text-teal-700 border border-teal-100',
+    accent: 'from-teal-500 to-teal-400',
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
@@ -52,12 +56,13 @@ const features = [
     ),
     title: 'Intelligent Asset Profiling',
     description:
-      'Drag, drop, type a hostname, select the technology. Ownership cascades down the architecture tree automatically. No CMDB migration, no legacy overhead — only the data continuity actually needs.',
+      'Drag, drop, type a hostname, pick the technology. Ownership cascades down the architecture tree automatically. No database migration required — only the data continuity actually needs.',
     highlight: 'Productive in hours, not months.',
   },
   {
     tag: 'Executive View',
-    tagColor: 'bg-amber-50 text-amber-700',
+    tagColor: 'bg-amber-50 text-amber-700 border border-amber-100',
+    accent: 'from-amber-500 to-amber-400',
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
@@ -66,14 +71,14 @@ const features = [
     ),
     title: 'Simple Management View',
     description:
-      'An interactive asset grid that doubles as a concentration heatmap — tiles darken as shared dependencies grow, making Single Points of Failure visible at a glance. Click any tile for a full technical deep dive.',
+      'An interactive asset grid that doubles as a concentration heatmap — tiles darken as shared dependencies grow, making hidden weak points visible at a glance. Click any tile for a full technical deep dive.',
     highlight: 'Executives see real exposure. No report required.',
   },
 ]
 
 export default function Features() {
   return (
-    <section id="features" className="py-24 px-6 bg-white border-t border-neutral-200">
+    <section id="features" className="py-24 px-6 mesh-subtle border-t border-neutral-200">
       <div className="max-w-6xl mx-auto">
 
         <div className="max-w-2xl mb-16">
@@ -81,23 +86,23 @@ export default function Features() {
             Features
           </p>
           <h2 className="text-4xl font-bold text-neutral-900 leading-tight mb-4">
-            Built for the job. Nothing more.
+            Built for the job.<br />Nothing more.
           </h2>
           <p className="text-lg text-neutral-600 leading-relaxed">
             Every screen, every workflow, every field exists because it directly serves
-            business continuity. Not compliance theatre. Not feature count.
+            business continuity — not compliance theatre, not feature count.
           </p>
         </div>
 
         {/* First two features: large horizontal */}
-        <div className="grid md:grid-cols-2 gap-6 mb-6">
+        <div className="grid md:grid-cols-2 gap-5 mb-5">
           {features.slice(0, 2).map((f) => (
             <FeatureCard key={f.title} feature={f} large />
           ))}
         </div>
 
         {/* Remaining three features */}
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-5">
           {features.slice(2).map((f) => (
             <FeatureCard key={f.title} feature={f} />
           ))}
@@ -107,21 +112,30 @@ export default function Features() {
   )
 }
 
-function FeatureCard({ feature, large = false }) {
-  const { tag, tagColor, icon, title, description, highlight } = feature
+function FeatureCard({ feature }) {
+  const { tag, tagColor, accent, icon, title, description, highlight } = feature
   return (
-    <div className={`rounded-xl border border-neutral-200 bg-neutral-50 p-6 hover:border-indigo-200 hover:bg-white hover:shadow-sm transition-all group ${large ? '' : ''}`}>
-      <div className="flex items-start gap-4 mb-4">
-        <div className="w-10 h-10 rounded-lg bg-white border border-neutral-200 flex items-center justify-center text-indigo-600 shrink-0 group-hover:bg-indigo-50 group-hover:border-indigo-200 transition-colors">
-          {icon}
+    <div className="card-hover-line rounded-xl border border-neutral-200 bg-white p-6 hover:border-indigo-200 hover:shadow-md transition-all group">
+      <div className="flex items-center justify-between mb-5">
+        <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${accent} bg-opacity-10 flex items-center justify-center text-white shrink-0`}
+          style={{ background: `linear-gradient(135deg, var(--tw-gradient-stops))` }}>
+          <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${accent} flex items-center justify-center`}>
+            {icon}
+          </div>
         </div>
-        <span className={`px-2.5 py-1 rounded-full text-xs font-medium ${tagColor} mt-1`}>
+        <span className={`px-2.5 py-1 rounded-full text-xs font-medium ${tagColor}`}>
           {tag}
         </span>
       </div>
-      <h3 className="text-lg font-semibold text-neutral-900 mb-2">{title}</h3>
-      <p className="text-sm text-neutral-600 leading-relaxed mb-4">{description}</p>
-      <p className="text-sm font-medium text-indigo-600">{highlight}</p>
+      <h3 className="text-base font-semibold text-neutral-900 mb-2 leading-snug">{title}</h3>
+      <p className="text-sm text-neutral-500 leading-relaxed mb-4">{description}</p>
+      <p className="text-sm font-semibold text-indigo-600 flex items-center gap-1.5">
+        <svg className="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5}
+            d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+        {highlight}
+      </p>
     </div>
   )
 }
