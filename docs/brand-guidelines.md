@@ -14,7 +14,8 @@
 | Accent Color | Amber — #F59E0B |
 | Primary Font | Inter |
 | Voice | Calm, Reassuring, Expert |
-| Tagline | *Stay ready. Stay running.* |
+| Primary Tagline | *One platform. Three teams. No translators.* |
+| Secondary Tagline | *Finally, IT and business agree on something.* |
 
 ---
 
@@ -228,11 +229,12 @@ Risky helps organizations build, test, and activate business continuity plans �
 
 ### Differentiators
 
-1. **Explainable AI** — Risk scores you can show auditors, not black-box outputs
-2. **DORA-ready out of the box** — Pre-built ICT risk management framework for EU financial firms
-3. **SME-accessible** — Guided setup, transparent pricing, no consultants required
-4. **Cyber + BC unified** — Incident response and continuity plans in a single workflow
-5. **Calm, not alarming** — Design and language built to reduce stress, not amplify it
+1. **Silo-breaking** — Business, IT, and risk teams all contribute in their own language; no translators needed
+2. **Financial risk quantification** — Scenarios modelled in projected revenue loss, recovery cost, and regulatory exposure
+3. **Explainable AI** — Risk scores you can show auditors, not black-box outputs
+4. **DORA-ready out of the box** — Pre-built ICT risk management framework for EU financial firms
+5. **SME-accessible** — Guided setup, transparent pricing, no consultants required
+6. **Calm, not alarming** — Design and language built to reduce stress, not amplify it
 
 ---
 
